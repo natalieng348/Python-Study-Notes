@@ -1,0 +1,93 @@
+"""
+4.17 LAB: Exact Change
+"""
+
+# Get user input as an integer
+total_change = int(input())
+
+# Coin values
+dollar = 100
+quarter = 25
+dime = 10
+nickel = 5
+penny = 1
+
+# Other global variables
+invalid_input = total_change <= 0
+
+
+# Coin count
+if invalid_input:
+    print('No change')
+else:
+    # Count number of dollars
+    dollar_count = total_change // dollar
+    # Remaining balance after converting to dollars
+    total_change = total_change % dollar
+    # Determine if single or plural dollar amount
+    if dollar_count == 1:
+        print(f'{dollar_count} Dollar')     # exactly 1 dollar
+    elif dollar_count > 1:
+        print(f'{dollar_count} Dollars')    # more than 1 dollar
+    else:
+        print(end='')
+    # Check remaining balance
+    if total_change == 0:
+        print(end='')
+    else:
+        # Count number of quarters
+        quarter_count = total_change // quarter
+        # Remaining balance after converting to quarters
+        total_change = total_change % quarter
+        # Determine if single or plural quarter amount
+        if quarter_count == 1:
+            print(f'{quarter_count} Quarter')
+        elif quarter_count > 1:
+            print(f'{quarter_count} Quarters')  # more than 1 dollar
+        else:
+            print(end='')
+        # Check remaining balance
+        if total_change == 0:
+            print(end='')
+        else:
+            # Count number of dimes
+            dime_count = total_change // dime
+            # Remaining balance after converting dimes
+            total_change = total_change % dime
+            # Determine if single or plural dime amount
+            if dime_count == 1:
+                print(f'{dime_count} Dime')
+            elif dime_count > 1:
+                print(f'{dime_count} Dimes')  # more than 1 dollar
+            else:
+                print(end='')
+            # Check remaining balance
+            if total_change == 0:
+                print(end='')
+            else:
+                # Count number of nickel
+                nickel_count = total_change // nickel
+                # Remaining balance after converting nickel
+                total_change = total_change % nickel
+                # Determine if single or plural nickel amount
+                if nickel_count == 1:
+                    print(f'{nickel_count} Nickel')
+                elif nickel_count > 1:
+                    print(f'{nickel_count} Nickels')  # more than 1 dollar
+                else:
+                    print(end='')
+                # Check remaining balance
+                if total_change == 0:
+                    print(end='')
+                else:
+                    # Count number of penny
+                    penny_count = total_change // penny
+                    # Remaining balance after converting penny
+                    total_change = total_change % penny
+                    # Determine if single or plural penny amount
+                    if penny_count == 1:
+                        print(f'{penny_count} Penny')
+                    elif penny_count > 1:
+                        print(f'{penny_count} Pennies')  # more than 1 Penny
+                    else:
+                        print(end='')
