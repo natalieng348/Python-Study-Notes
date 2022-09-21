@@ -1,6 +1,6 @@
 # zyBook-notes
 
-📝 Study Notes for [Python zyBooks](0learn.zybooks.com) 👩‍💻
+📝 My study notes & solutions for [Python zyBooks](0learn.zybooks.com) 👩‍💻
 
 ## Content
 
