@@ -58,4 +58,10 @@ Incremental development: a small amount of code is written and tested, then a sm
     """
     ```
 
+## Function arguments
 
+ When a function modifies a parameter, whether or not that modification is seen outside the scope of the function depends on the i of the argument object.
+ 
+ * If immutable (str or int), modification is limited to inside the function.
+ * If mutable (list or dict), modification can be seen outside the scope of the function.
+ 
