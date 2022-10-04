@@ -135,3 +135,21 @@ numbers = append_to_list(100)  # default list appended with 100
 print(numbers)
 ```
 
+## Docstrings
+
+A docstring is a string literal placed at the first line of a function body.
+
+We use docstrings to document functions. Good practice is to keep the docstring fof a simple function on a single line.
+
+Example:
+
+```
+def print_output():
+    """Prints output after calculation"""
+    # Function body statements...
+```
+
+## The help() function
+
+The help() function prints out the docstring for the function, providing the programmer with information about how to call that function.
+
