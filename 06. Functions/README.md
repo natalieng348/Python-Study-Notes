@@ -65,3 +65,73 @@ Incremental development: a small amount of code is written and tested, then a sm
  * If immutable (str or int), modification is limited to inside the function.
  * If mutable (list or dict), modification can be seen outside the scope of the function.
  
+
+## Keyword arguments
+
+Keyword arguments that allow arguments to map to parameters by name.
+
+When using keyword arguments, the argument list does not need to follow a specific ordering.
+
+Good practice is to use keyword arguments for any function containing more than approximately 4 arguments.
+
+Examples:
+
+1. Without keyword argument:
+
+```
+def print_book_description(title, author, publisher, year, version, num_chapters, num_pages):
+    # Format and print description of a book...
+
+print_book_description('The Lord of the Rings', 'J. R. R. Tolkien', 'George Allen & Unwin', 
+                       1954, 1.0, 22, 456)
+```
+ 
+ 2. With keyword argument:
+ 
+ ```
+ ef print_book_description(title, author, publisher, year, version, num_chapters, num_pages):
+    # Format and print description of a book...
+
+print_book_description(title='The Lord of the Rings', publisher='George Allen & Unwin',
+                       year=1954, author='J. R. R. Tolkien', version=1.0,
+                       num_pages=456, num_chapters=22)
+ ```
+
+## Default parameter values
+
+When a function call omits an argument, and the default parameter value will be substituted for the corresponding omitted argument
+
+Example:
+
+```
+def print_date(day, month, year, style=0):
+    if style == 0:  # American
+        print(month, '/', day, '/', year)
+    elif style == 1:  # European
+        print(day, '/', month, '/', year)
+    else:
+        print('Invalid Style')
+
+print_date(30, 7, 2012, 0)
+print_date(30, 7, 2012, 1)
+print_date(30, 7, 2012)  # style argument not provided! Default value of 0 used.
+```
+
+Common error: providing a mutable object (such as a list) as a default parameter. 
+    * Modification of the default parameter object will persist across function calls.
+  
+Good example:
+
+```
+def append_to_list(value, my_list=None):  # Use default parameter value of None
+    if my_list == None:  # Create a new list if a list was not provided
+        my_list = []
+    my_list.append(value)
+    return my_list
+
+numbers = append_to_list(50)  # default list appended with 50
+print(numbers)
+numbers = append_to_list(100)  # default list appended with 100
+print(numbers)
+```
+
