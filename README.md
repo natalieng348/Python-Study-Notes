@@ -11,3 +11,4 @@
 | [Chapter 5](https://github.com/natalieng348/zyBook-notes/tree/main/05.%20Loops) | Loops |
 | [Chapter 6](https://github.com/natalieng348/Python-Study-Notes/tree/main/06.%20Functions) | Functions |
 | [Chapter 7](https://github.com/natalieng348/Python-Study-Notes/tree/main/07.%20Strings) | Strings |
+| [Chapter 8]() | Lists |
