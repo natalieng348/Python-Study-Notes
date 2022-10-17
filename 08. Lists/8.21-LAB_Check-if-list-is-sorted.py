@@ -26,7 +26,7 @@ def in_order(nums):
     for index in range(len(nums)-1):
         max_num = nums[index]
         next_num = nums[index+1]
-        if max_num <= next_num:
+        if next_num >= max_num:
             max_num = next_num 
             result = True
         else:
