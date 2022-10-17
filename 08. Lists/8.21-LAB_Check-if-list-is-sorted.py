@@ -48,3 +48,14 @@ if __name__ == '__main__':
         print('In order')
     else:
         print('Not in order')
+        
+"""
+1: Unit test where nums is [5, 6, 7, 8, 3]
+Test passed: in_order() correctly returned False
+
+2: Unit test where nums is [5, 6, 7, 8, 10]
+Test passed: in_order() correctly returned True
+
+3: Unit test where nums is [5, 5, 6, 6, 6, 7, 8, 10, 10, 10, 10]
+Test passed: in_order() correctly returned True
+"""
