@@ -25,8 +25,9 @@ def in_order(nums):
     """Return True if list is sorted, and False otherwise"""
     for index in range(len(nums)-1):
         max_num = nums[index]
-        if max_num <= nums[index+1]:
-            max_num = nums[index+1] 
+        next_num = nums[index+1]
+        if max_num <= next_num:
+            max_num = next_num 
             result = True
         else:
             result = False
