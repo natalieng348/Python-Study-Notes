@@ -97,7 +97,7 @@ print(f'Barbara:\n Net pay: {barbara.calculate_pay():.2f}')
   Result: `Monster Truck XX costs only $14.99. Not for children under 5!`
   
 
-### Operator Overloading
+## Operator Overloading
 
 * Class operators can redefine the functionality of built-in operators like <,>=,+,-,* when used in class instances. This technique is called Operator Overloading
 
@@ -112,5 +112,26 @@ print(f'Barbara:\n Net pay: {barbara.calculate_pay():.2f}')
   | `__eq__(self, other)`  | equal to (==)                 |
   | `__ne__(self, other)`  | not-equal to (!=)             |
   
+* Numeric operators such as +,-,* and / can be overloaded suing class customization techniques
+
+* Methods for emulating numeric types
+
+  |           Method          |             Description             |
+  |:-------------------------:|:-----------------------------------:|
+  | __add__(self, other)      | Add (+)                             |
+  | __sub__(self, other)      | Subtract (-)                        |
+  | __mul__(self, other)      | Multiply (*)                        |
+  | __truediv__(self, other)  | Divide (/)                          |
+  | __floordiv__(self, other) | Floored division (//)               |
+  | __mod__(self, other)      | Modulus (%)                         |
+  | __pow__(self, other)      | Exponentiation (**)                 |
+  | __and__(self, other)      | "and" logical operator              |
+  | __or__(self, other)       | "or" logical operator               |
+  | __abs__(self)             | Absolute value (abs())              |
+  | __int__(self)             | Convert to integer (int())          |
+  | __float__(self)           | Convert to floating point (float()) |
+  
+  
+
 
 
