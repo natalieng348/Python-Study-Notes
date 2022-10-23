@@ -60,4 +60,57 @@ print(f'Barbara:\n Net pay: {barbara.calculate_pay():.2f}')
       garrett = PhoneNumber()
       garrett.number = '805-555-1234'   # number can be changed outside of the function scope
       ```
-   
+
+## Class customization
+
+* Class customization is the process of defining how a class should behave for some common operations. 
+* Such operations might include printing, accessing attributes, or how instances of that class are compared to each other.
+* To cusomize a class, a programmer implements instances methods with *special method names*
+* Example: `__str__()` method is used to change how a class instance object is printed
+ * Normal printing 
+  ```
+  class Toy:
+     def __init__(self, name, price, min_age):
+         self.name = name
+         self.price = price
+         self.min_age = min_age
+     
+ truck = Toy('Monster Truck XX', 14.99, 5)
+ print(truck)
+  ```
+  Result: `<__main__.Toy instance at 0xb74cb98c>`
+  
+ * Customized printing
+  ```
+  class Toy:
+      def __init__(self, name, price, min_age):
+         self.name = name
+         self.price = price
+         self.min_age = min_age
+     
+      def __str__(self):
+         return (f'{self.name} costs only ${self.price:.2f}.'
+                 f' Not for children under {self.min_age}!'}
+  truck = Toy('Monster Truck XX', 14.99, 5)
+  print(truck)
+  ```
+  Result: `Monster Truck XX costs only $14.99. Not for children under 5!`
+  
+
+### Operator Overloading
+
+* Class operators can redefine the functionality of built-in operators like <,>=,+,-,* when used in class instances. This technique is called Operator Overloading
+
+* Rich comparison methods:
+ 
+  | Rich comparison method |      Overloaded operator      |
+  |:----------------------:|:-----------------------------:|
+  | `__lt__(self, other)`  | less-than (<)                 |
+  | `__le__(self, other)`  | less-than or equal-to (<=)    |
+  | `__gt__(self, other)`  | greater-than (>)              |
+  | `__ge__(self, other)`  | greater-than or equal-to (>=) |
+  | `__eq__(self, other)`  | equal to (==)                 |
+  | `__ne__(self, other)`  | not-equal to (!=)             |
+  
+
+
