@@ -4,7 +4,7 @@
 
 * A function defined within a class is known as an instance method.
 * An instance method can be referenced using dot notation. 
-* __init__ is a special method name -- used for initialization of new instances
+* `__init__` is a special method name -- used for initialization of new instances
   * Good practice is to avoid using the double underscores __ in identifiers to prevent collisions with special method names
 * A common error for new programmers is to omit the self argument as the first parameter of a method.
 
